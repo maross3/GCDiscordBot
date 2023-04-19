@@ -54,10 +54,13 @@ npm test
 
 ## Create A New Command
 Navigate to `/src/commands` and create a new typescript file in the designated folder category.
-Example path: `/src/commands/animals/cat.ts`. For reference on how to build a command, refer to `index.ts`.
+Example path: `/src/commands/animals/cat.ts`. For reference on how to build a command, refer to  one of the commands in 
+`/src/commands`.
 
 ## Create A Unit Test
 
 Navigate to `/spec/` and create a unit test file  with the extension `*.spec.ts`, inside the designated folder category.
 For example, if you are making a command unit test, keep the spec hierarchy the same as the `src`.
 The above example path would look like: `/spec/commands/animals/cat.spec.ts`
+
+>*Note: Every command should have an accompanying test in the spec folder.*
