@@ -1,0 +1,26 @@
+dist/
+node_modules/
+.env
+# Project exclude paths
+/spec/commands/general/ping.spec.d.ts
+/spec/commands/general/ping.spec.js
+/src/commands/context/echo.d.ts
+/src/commands/context/echo.js
+/src/commands/general/ping.d.ts
+/src/commands/general/ping.js
+/src/events/client/ready.d.ts
+/src/events/client/ready.js
+/src/events/interaction/command.d.ts
+/src/events/interaction/command.js
+/src/misc/util.d.ts
+/src/misc/util.js
+/src/structures/client.d.ts
+/src/structures/client.js
+/src/structures/command.d.ts
+/src/structures/command.js
+/src/structures/event.d.ts
+/src/structures/event.js
+/src/deploy-commands.d.ts
+/src/deploy-commands.js
+/src/index.d.ts
+/src/index.js

@@ -1,0 +1,30 @@
+{
+  "name": "testsuite",
+  "version": "1.0.0",
+  "description": "Test suite in JS/TS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "pretest": "tsc",
+    "test": "jasmine",
+    "start:prod": "node src/index.js",
+    "build": "tsc",
+    "start": "npm run build && npm run start:prod",
+    "deploy": "npm run build && node src/deploy-commands.js"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/jasmine": "^4.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "jasmine": "^4.5.0",
+    "jasmine-core": "^4.5.0",
+    "jasmine-ts-console-reporter": "^3.1.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "discord.js": "^14.9.0",
+    "dotenv": "^16.0.3",
+    "jsdom": "^21.1.0"
+  }
+}
