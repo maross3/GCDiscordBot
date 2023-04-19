@@ -20,7 +20,7 @@ npm install
 2. Create a discord bot and invite it as per this guide:
 https://discordpy.readthedocs.io/en/stable/discord.html
 3. Go to your discord [developer portal](https://letmegooglethat.com/?q=discord+developer+portal).
-4. Navigate to your newly created applications 
+4. Navigate to your newly created application 
 5. Rename `.env.example` to `.env`
 6. Copy the token and paste it directly after, ex: `TOKEN=89797`![api token location](./documentation/apitoken.png)
 7. Copy the application ID and paste it directly after `CLIENT ID=3289239`![client id location](./documentation/clientid.png)
@@ -31,17 +31,17 @@ https://discordpy.readthedocs.io/en/stable/discord.html
 
 ---- 
  
-## Run the bot in production.
+## Run The Bot in Production
 ```bash
 npm start 
 ```
 
-## Deploy the bot
-or "push your changes" to the bot.
+## Deploy The Bot
+*"pushes your changes" to the bot.*
 ```bash
 npm run deploy 
 ```
-## Run console tests:
+## Run Console Tests
 
 ```bash
 # compile the typescript and start the console test runner
