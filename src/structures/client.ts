@@ -6,11 +6,11 @@ import { CommandClass } from './command.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import {startServer} from "../misc/httpServer.js";
 
 const dynamicImport = (path: string) => import(pathToFileURL(path).toString()).then((module) => module?.default);
 
 export class ExtendedClient extends Client {
-
     constructor() {
         super({
             intents: [
@@ -25,7 +25,7 @@ export class ExtendedClient extends Client {
         this.commands = new Collection<string, CommandClass>();
         this.cooldown = new Collection<string, Collection<string, number>>();
     };
-    
+
     private async loadModules() {
 
         //Commands
@@ -76,7 +76,14 @@ export class ExtendedClient extends Client {
      * This is used to log into the Discord API with loading all commands and events.
      */
     async start() {
+        this.on('error', console.error);
+        this.once('ready', () => {
+            console.log('Bot is ready!');
+            startServer(this);
+        });
+
         this.login(process.env.TOKEN);
         this.loadModules();
     };
+
 };
